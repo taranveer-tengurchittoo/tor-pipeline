@@ -1,0 +1,19 @@
+services:
+  tor:
+    image: dperson/torproxy:latest
+    ports:
+      - "9050:9050"   # SOCKS5
+      - "9051:9051"   # control port
+    environment:
+      PASSWORD: ${TOR_CONTROL_PASSWORD:-tor-pipeline}
+    restart: unless-stopped
+
+  chrome:
+    image: selenium/standalone-chrome:latest
+    ports:
+      - "4444:4444"
+      - "7900:7900"   # noVNC (browser preview)
+    shm_size: 2g
+    depends_on:
+      - tor
+    restart: unless-stopped
