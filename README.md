@@ -314,6 +314,10 @@ tor_pipeline/
 - **No built-in rate limiting.** The examples use `time.sleep()` between requests. If your target has specific rate-limit patterns, add your own throttling logic.
 - **Shared Tor daemon.** All workers route through the same Tor SOCKS5 port. Circuit renewal via NEWNYM affects new connections from all workers. For true per-worker circuit isolation, run multiple Tor instances on different ports.
 
+## Disclaimer
+
+This project is provided for educational and research purposes only. It demonstrates browser automation, network proxying, and distributed systems patterns. You are solely responsible for how you use it. Scraping a website may violate its terms of service. Bypassing access controls may violate local laws depending on your jurisdiction. Always get permission before scraping a site you do not own. The author assumes no liability for misuse.
+
 ## License
 
 MIT
