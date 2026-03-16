@@ -33,7 +33,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/taranveer/tor-pipeline"
+Repository = "https://github.com/taranveer-tengurchittoo/tor-pipeline"
 
 [project.scripts]
 tor-pipeline = "tor_pipeline.cli:main"
